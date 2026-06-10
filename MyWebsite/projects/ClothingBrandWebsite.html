@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Staple Studio</title>
+<style>
+/* --- Updated CSS --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* --- Header --- */
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* --- Section Headings --- */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 15px 0 5px 0;
+  font-size: 1.2em;
+  color: #2980b9;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.product-card .description {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* --- Buttons --- */
+.product-card button {
+  padding: 10px 15px;
+  margin-top: 5px;
+  cursor: pointer;
+  background: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.product-card button:hover {
+  background: #3498db;
+  transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media(max-width: 600px){
+  header h1{font-size: 1.8em;}
+  .product-card { width: 90%; max-width: 300px; }
+  .product-card img { height: auto; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>The Staple Studio</h1>
+</header>
+
+<section id="products">
+<h2>Our Products</h2>
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/shirt1.jpg" alt="Shirt 1">
+<h3>Classic Shirt</h3>
+<p class="description">100% Cotton, Slim Fit</p>
+<p>R250</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/shirt2.jpg" alt="Shirt 2">
+<h3>Summer Tee</h3>
+<p class="description">Lightweight, Breathable</p>
+<p>R200</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/jacket1.jpg" alt="Jacket 1">
+<h3>Leather Jacket</h3>
+<p class="description">Genuine Leather, Limited Edition</p>
+<p>R600</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/hoodie1.jpg" alt="Hoodie 1">
+<h3>Cozy Hoodie</h3>
+<p class="description">Soft Fleece, Unisex</p>
+<p>R350</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/pants1.jpg" alt="Pants 1">
+<h3>Denim Jeans</h3>
+<p class="description">Slim Fit, Stretch Denim</p>
+<p>R400</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/skirt1.jpg" alt="Skirt 1">
+<h3>Floral Skirt</h3>
+<p class="description">Lightweight, Summer Style</p>
+<p>R300</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/sneakers1.jpg" alt="Sneakers 1">
+<h3>Casual Sneakers</h3>
+<p class="description">Comfortable, Everyday Wear</p>
+<p>R450</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/jacket2.jpg" alt="Jacket 2">
+<h3>Windbreaker Jacket</h3>
+<p class="description">Water-Resistant, Sporty</p>
+<p>R550</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<script>
+const buttons = document.querySelectorAll('.product-card button');
+buttons.forEach(btn => {
+  btn.addEventListener('click', ()=>{ 
+    alert('Added to cart!'); 
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Contact Page for Mbulawa Digital Systems -->
+<!-- Designed by Liyema Mbulawa -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mbulawa Digital Systems</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="images/MbulawaDigitalSystems.jpg" alt="Mbulawa Digital Systems Logo" class="logo">
+        </a>
+        <div class="header-text">
+            <h1>Get In Touch With Mbulawa Digital Systems</h1>
+            <p>We'd love to hear from you! Whether you have questions, need a quote, or are ready to start your project, contact us today.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html" class="btn">Home</a></li>
+            <li><a href="about.html" class="btn">About Us</a></li>
+            <li><a href="services.html" class="btn">Services</a></li>
+            <li><a href="projects.html" class="btn">Portfolio</a></li>
+            <li><a href="contact.html" class="btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div>
+                <h2 id="contact-form">Contact Form</h2>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Details -->
+        <section class="about">
+            <div>
+                <h2>Other Ways To Contact Us</h2>
+                <ul>
+                    <li><strong>Email:</strong> mbulawadigitalsystems@gmail.com</li>
+                    <li><strong>Phone:</strong> +27 79 763 5602</li>
+                    <li><strong>Location:</strong> Bloemfontein, Free State & Knysna, Western Cape</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-nav">
+        <hr>
+        <p>&copy; 2026 Mbulawa Digital Systems. All rights reserved.</p>
+    </footer>
+
+    <!-- EmailJS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("rQohIqUvorTqIteMI"); // Your Public Key
+
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            emailjs.send(
+                "service_lzyg3hr", // Your Service ID
+                "template_pw72w3n", // Your Template ID
+                {
+                    from_name: document.getElementById("name").value,
+                    from_email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    message: document.getElementById("message").value
+                }
+            ).then(function(response){
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset();
+            }, function(error){
+                alert("Failed to send message. Please try again.");
+                console.error("EmailJS Error:", error);
+            });
+        });
+    </script>
+
+    <script src="scriptr.js"></script>
+</body>
+
+</html>

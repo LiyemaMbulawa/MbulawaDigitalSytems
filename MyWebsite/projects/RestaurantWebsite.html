@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa del Sabor</title>
+<style>
+/* --- Updated CSS --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf6f0;
+  color: #333;
+}
+
+header {
+  background: rgba(255, 0, 0, 0.377); /* Softer red */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: black;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffeaa7;
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: black;
+}
+
+/* --- Menu --- */
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.527);
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card h3 {
+  margin: 0 0 10px 0;
+  color: black;
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-grid img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Reservation Form --- */
+#reservations form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.479);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+#reservations form input,
+#reservations form button {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#reservations form button {
+  background: #9e250fde;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#reservations form button:hover {
+  background: #c0392b;
+}
+
+/* --- Footer --- */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* --- Responsive --- */
+@media(max-width: 600px){
+  nav a { display: block; margin: 5px 0; }
+  .menu-card { width: 100%; max-width: 300px; }
+  .gallery-grid img { width: 100%; max-width: 300px; height: auto; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Casa del Sabor</h1>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reservations">Reservations</a>
+  </nav>
+</header>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Pizza</h3>
+      <p>$10</p>
+    </div>
+    <div class="menu-card">
+      <h3>Pasta</h3>
+      <p>$12</p>
+    </div>
+    <div class="menu-card">
+      <h3>Salad</h3>
+      <p>$8</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/dish1.jpg" alt="Dish 1">
+    <img src="images/dish2.jpg" alt="Dish 2">
+    <img src="images/dish3.jpg" alt="Dish 3">
+  </div>
+</section>
+
+<section id="reservations">
+  <h2>Reservations</h2>
+  <form id="reservationForm">
+    <input type="text" placeholder="Name" required>
+    <input type="date" required>
+    <input type="time" required>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 Casa del Sabor</p>
+</footer>
+
+<script>
+/* --- JS Embedded --- */
+document.getElementById('reservationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Reservation submitted! We will contact you soon.');
+});
+</script>
+
+</body>
+</html>

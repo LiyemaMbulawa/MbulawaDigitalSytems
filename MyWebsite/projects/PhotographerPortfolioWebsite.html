@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Captured Portfolio</title>
+<style>
+/* --- Updated CSS --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf6f0;
+  color: #333;
+}
+
+header {
+  background: #2c3e50; /* slightly softer than before */
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* --- Portfolio Section --- */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-grid img {
+  width: 260px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* --- Contact Form --- */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#contact form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contact form button {
+  background: #16a085;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact form button:hover {
+  background: #1abc9c;
+}
+
+/* --- Responsive --- */
+@media(max-width: 600px){
+  .portfolio-grid img {
+    width: 90%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Forever Captured</h1>
+</header>
+
+<section id="portfolio">
+<h2>My Work</h2>
+<div class="portfolio-grid">
+<img src="images/photo1.jpg" alt="Photo 1">
+<img src="images/photo2.jpg" alt="Photo 2">
+<img src="images/photo3.jpg" alt="Photo 3">
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="example@gmail.com" required>
+<textarea placeholder="Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<script>
+document.querySelector('#contact form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Message sent! Thank you for contacting me.');
+});
+</script>
+
+</body>
+</html>
