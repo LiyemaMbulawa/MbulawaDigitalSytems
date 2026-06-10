@@ -30,7 +30,7 @@ This repository may include:
 For inquiries or collaboration:
 
 - Business Name: Mbulawa Digital Systems  
-- Email: your-email@example.com  
+- Email: mbulawadigitalsytems@gmail.com  
 - Location: South Africa  
 
 ## License
