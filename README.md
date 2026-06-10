@@ -34,4 +34,4 @@ For inquiries or collaboration:
 - Location: South Africa  
 
 ## License
-Unless stated otherwise, all content in this repository is proprietary and owned by Mbulawa Digital Systems. Unauthorized use, copying, or distribution is not allowed.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
